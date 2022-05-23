@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: black;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 128px;
+    height: 45px;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navigation {
+  @include media("<=desktop") {
+    position: fixed;
+    top: 93px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 93px);
+    transform: translateX(100%);
+    background: $c-olive;
+    transition: transform 0.3s ease;
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    @include media("<=desktop") {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media("<=desktop") {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-right: 20px;
+    // !Последний итем
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include media("<=desktop") {
+      margin-right: 0px;
+    }
+  }
+}
+
+&__link {
+  padding: 5px;
+  position: relative;
+  line-height: 1; /*задаём высоту строки*/
+
+  &:after {
+    top: 100%;
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: $c-white; /*задаём цвет линии*/
+    content: "";
+    transition: $t-normal; /*задаём время анимации*/
+  }
+
+  &:hover:after,
+  &:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  }
+
+  .hamburger {
+    display: none;
+    @include media("<=desktop") {
+      display: block;
+    }
+  }
+}
