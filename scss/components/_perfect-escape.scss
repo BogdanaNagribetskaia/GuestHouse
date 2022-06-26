@@ -1,0 +1,36 @@
+.perfect-escape {
+  padding: 50px 0;
+
+  &__title {
+    margin-top: 30px;
+    font-size: $fs-h4;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-basis: 50%;
+      margin-top: 42px;
+    }
+
+    &-description {
+      margin-left: 14px;
+    }
+  }
+}
+
+.icon-plate,
+.icon-trees,
+.icon-food_processor,
+.icon-mountain,
+.icon-conditioner,
+.icon-bag,
+.icon-wineglass,
+.icon-pizza {
+  font-size: 2.25em;
+  min-width: 36px;
+}

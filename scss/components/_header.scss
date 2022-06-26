@@ -5,7 +5,8 @@
   left: 0;
   padding-top: 18px;
   padding-bottom: 18px;
-  background-color: black;
+  background-color: $c-olive;
+  z-index: 100;
 
   &__inner {
     display: flex;
@@ -69,34 +70,28 @@
       margin-right: 0px;
     }
   }
-}
 
-&__link {
-  padding: 5px;
-  position: relative;
-  line-height: 1; /*задаём высоту строки*/
+  &__link {
+    padding: 5px;
+    position: relative;
+    line-height: 1; /*задаём высоту строки*/
+    font-size: $fs-base-m;
 
-  &:after {
-    top: 100%;
-    display: block;
-    position: absolute;
-    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    width: 0; /*задаём длинну линии до наведения курсора*/
-    height: 2px; /*задаём ширину линии*/
-    background-color: $c-white; /*задаём цвет линии*/
-    content: "";
-    transition: $t-normal; /*задаём время анимации*/
-  }
-
-  &:hover:after,
-  &:focus:after {
-    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
-  }
-
-  .hamburger {
-    display: none;
-    @include media("<=desktop") {
+    &:after {
+      top: 100%;
       display: block;
+      position: absolute;
+      left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+      width: 0; /*задаём длинну линии до наведения курсора*/
+      height: 2px; /*задаём ширину линии*/
+      background-color: $c-white; /*задаём цвет линии*/
+      content: "";
+      transition: $t-normal; /*задаём время анимации*/
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
     }
   }
 }
