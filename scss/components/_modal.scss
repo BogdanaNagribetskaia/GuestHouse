@@ -1,0 +1,116 @@
+/* Form */
+
+.modal {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: $t-normal;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 400px;
+  border: 2px solid $c-white;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: $c-olive;
+  color: $c-white;
+
+  &__wrapper {
+    flex-direction: column;
+    display: flex;
+  }
+
+  &__title {
+    font-size: $fs-base-m + 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__label {
+    flex-direction: column;
+    display: flex;
+  }
+
+  &__subtitle {
+    line-height: 1;
+  }
+
+  &__input {
+    padding: 0 10px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid $c-white;
+    background-color: $c-white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    outline-style: none;
+  }
+
+  &__btn__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    align-items: center;
+    background-color: $c-white;
+    color: $c-white;
+    height: 36px;
+    padding: 11px 16px;
+    border: 1px solid $c-white;
+    background-color: $c-olive;
+    cursor: pointer;
+    transition: $t-normal;
+    margin-top: 16px;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-olive;
+      border: 1px solid $c-white;
+    }
+  }
+
+  &__btn__x {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: $c-olive;
+    border: none;
+  }
+}
+
+.error {
+  border: 2px solid var(--c-red);
+}
+
+.icon-cross {
+  font-size: 0.8em;
+  fill: $c-white;
+}

@@ -9,14 +9,16 @@
   width: 118px;
   padding: 11px 16px;
   border: 1px solid $c-olive;
+  box-shadow: inset 0 0 0 1px $c-olive;
+
   cursor: pointer;
   transition: $t-normal;
 
   &:hover {
     background-color: $c-olive;
     color: $c-white;
-    box-shadow: inset 0 0 0 1px $c-white;
-    border: 1px solid $c-olive;
+    // box-shadow: inset 0 0 0 1px $c-white;
+    border: 1px solid $c-white;
   }
 }
 .button-olive {
@@ -30,7 +32,6 @@
   width: 118px;
   padding: 11px 16px;
   border: 1px solid $c-olive;
-
   background-color: $c-olive;
   cursor: pointer;
   transition: $t-normal;

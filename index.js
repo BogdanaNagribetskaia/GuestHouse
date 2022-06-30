@@ -1,3 +1,6 @@
+import { registration } from './registration.js';
+import { modal } from './modal.js';
+
 // Burger
 
 const burgerBtn = document.querySelector('.header__hamburger');
@@ -12,10 +15,8 @@ burgerBtn.addEventListener('click', function () {
 const swiper = new Swiper('.swiper', {
   slidesPerView: 2,
   spaceBetween: 30,
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -175,3 +176,35 @@ window.initMap = function () {
     icon: myPin,
   });
 };
+
+// Animation
+AOS.init({
+  disable: 'mobile',
+  startEvent: 'DOMContentLoaded',
+  initClassName: 'aos-init',
+  animatedClassName: 'aos-animate',
+  useClassNames: false,
+  disableMutationObserver: false,
+  debounceDelay: 50,
+  throttleDelay: 99,
+  offset: 120,
+  delay: 0,
+  duration: 400,
+  easing: 'ease',
+  once: false,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+});
+
+// Registration
+
+document
+  .getElementById('js-registration-form')
+  .addEventListener('submit', registration);
+const toggleRegistrationButtons = document.getElementsByClassName(
+  'js-toggle-registration-modal'
+);
+
+for (const item of toggleRegistrationButtons) {
+  item.addEventListener('click', modal);
+}

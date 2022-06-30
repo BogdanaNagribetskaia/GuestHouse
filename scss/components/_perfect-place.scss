@@ -15,5 +15,7 @@
     margin-top: 32px;
     font-size: $fs-h2;
     text-align: center;
+    animation: fadeInLeft;
+    animation-duration: 2s;
   }
 }

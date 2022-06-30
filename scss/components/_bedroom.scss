@@ -5,6 +5,8 @@
   align-items: center;
   background-color: $c-floral-white;
   text-align: center;
+  animation: fadeInDown;
+  animation-duration: 2s;
 
   &__line {
     width: 42px;

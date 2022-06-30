@@ -45,12 +45,16 @@
   &__logo {
     width: 256px;
     height: 90px;
+    animation: fadeInDown;
+    animation-duration: 2s;
   }
 
   &__title {
     margin-top: 34px;
     font-size: $fs-h3;
     line-height: 52.8px;
+    animation: fadeInLeft;
+    animation-duration: 2s;
   }
 
   &__description {
@@ -58,6 +62,8 @@
     font-size: $fs-base-s;
     text-transform: uppercase;
     letter-spacing: $ls-base;
+    animation: fadeInRight;
+    animation-duration: 2s;
   }
 
   &__mouse {
@@ -69,7 +75,7 @@
     left: 50%;
     transition: $t-normal;
     &:hover {
-      transform: translateY(30px);
+      transform: translateY(15px);
       opacity: 0.6;
     }
   }

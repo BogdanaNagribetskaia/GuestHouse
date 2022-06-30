@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/favico/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="./libs/aos/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./index.css">
   <title>Guest House</title>
@@ -20,6 +22,11 @@
   <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+      <symbol id="icon-cross" viewBox="0 0 32 32">
+        <path
+          d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z">
+        </path>
+      </symbol>
       <symbol id="icon-facebook" viewBox="0 0 32 32">
         <path
           d="M18.129 32h-3.935c-1.009 0-1.816-0.855-1.816-1.912v-11.975h-3.229c-1.009 0-1.816-0.855-1.816-1.912v-3.472c0-1.057 0.807-1.912 1.816-1.912h3.128v-3.17c0-4.579 2.724-7.648 6.76-7.648h3.027c1.009 0 1.816 0.855 1.816 1.912v4.075c0 1.057-0.807 1.912-1.816 1.912h-2.068c-0.050 0-0.050 0-0.101 0 0 0.050 0 0.101 0 0.151v2.717h2.875c0.605 0.050 1.11 0.302 1.463 0.704 0.353 0.453 0.505 1.057 0.404 1.61l-0.605 3.421c-0.101 0.906-0.858 1.56-1.816 1.56h-2.32v12.025c0 1.006-0.807 1.912-1.766 1.912zM13.235 16.352c0.504 0 0.908 0.402 0.908 0.906v12.83c0 0.101 0.050 0.151 0.050 0.151h3.935c0 0 0.050-0.050 0.050-0.151v-12.931c0-0.503 0.404-0.906 0.908-0.906h3.178c0 0 0.050 0 0.050-0.050v-0.050l0.605-3.371c0-0.101 0-0.151-0.050-0.201 0 0-0.050-0.050-0.101-0.050h-3.733c-0.505 0-0.908-0.402-0.908-0.906v-3.572c0-0.906 0.151-1.912 1.866-1.912h2.068c0 0 0.050-0.050 0.050-0.151v-4.025c0-0.101-0.050-0.151-0.050-0.151h-2.976c-3.027 0-4.994 2.314-4.994 5.887v4.075c0 0.503-0.404 0.906-0.908 0.906h-4.036c0 0-0.050 0.050-0.050 0.151v3.472c0 0.101 0.050 0.151 0.050 0.151l4.086-0.101z">
@@ -110,15 +117,17 @@
           d="M24.038 0c4.384 0 7.962 3.533 7.962 7.924v16.101c0 4.391-3.528 7.975-7.912 7.975h-16.126c-4.384 0-7.962-3.533-7.962-7.924v-16.151c0-4.391 3.528-7.924 7.912-7.924h16.126zM24.038 1.767h-16.126c-3.376 0-6.148 2.776-6.148 6.158v16.151c0 3.432 2.772 6.208 6.148 6.208h16.176c3.376 0 6.148-2.776 6.148-6.208v-16.101c0-3.432-2.772-6.208-6.198-6.208zM15.975 8.58c4.082 0 7.408 3.331 7.408 7.42s-3.326 7.42-7.408 7.42c-4.082 0-7.408-3.331-7.408-7.42s3.326-7.42 7.408-7.42zM15.975 10.347c-3.124 0-5.644 2.524-5.644 5.653s2.52 5.653 5.644 5.653c3.124 0 5.644-2.524 5.644-5.653s-2.52-5.653-5.644-5.653zM24.088 4.946c1.058 0 1.915 0.858 1.915 1.918s-0.857 1.918-1.915 1.918c-1.058 0-1.915-0.858-1.915-1.918s0.857-1.918 1.915-1.918z">
         </path>
       </symbol>
-      <symbol id="icon-arrow-right2" viewBox="0 0 32 32">
+      <symbol id="icon-circle-right" viewBox="0 0 32 32">
         <path
-          d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z">
+          d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z">
         </path>
+        <path d="M11.086 22.086l2.829 2.829 8.914-8.914-8.914-8.914-2.828 2.828 6.086 6.086z"></path>
       </symbol>
-      <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+      <symbol id="icon-circle-left" viewBox="0 0 32 32">
         <path
-          d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z">
+          d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z">
         </path>
+        <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
       </symbol>
     </defs>
   </svg>
@@ -143,7 +152,7 @@
         </nav>
         <!-- Button -->
         <div class="header__button">
-          <button type="button" class="button-white">
+          <button type="button" class="button-white js-toggle-registration-modal">
             <span class="button__text">Book now</span>
           </button>
         </div>
@@ -161,7 +170,7 @@
     <div class="banner__wrapper container">
       <div class="banner__content container">
         <img class="banner__logo" src="./assets/img/logo.png" alt="Logo">
-        <div class="banner__title">
+        <div data-aos="fade-right" class="banner__title">
           Experience the perfect combination of modern housing & natural scenery.
         </div>
         <div class="banner__description">
@@ -191,7 +200,8 @@
         Below you'll find information about the accommodation and what's included in the price. Don't hesitate to
         reach out to us vi the contact page if you have any questions around your stay.
         <div class="description__button">
-          <button type="button" class="button-olive">
+          <button data-aos="fade-left" data-aos-duration="2000" type="button"
+            class="button-olive js-toggle-registration-modal">
             <span class="button__text">Book now</span>
           </button>
         </div>
@@ -224,7 +234,7 @@
       rhoncus feugiat eros quis consectetur.
     </div>
     <div class="bedroom__content   container">
-      <div class="bedroom__content-item">
+      <div data-aos="fade-left" data-aos-duration="800" class="bedroom__content-item">
         <svg class="icon bedroom__icon">
           <use xlink:href="#icon-bed"></use>
         </svg>
@@ -235,7 +245,7 @@
           The cabin is equipped with 12 beds, 4 of which are in bunk. The rent includes linens for all beds.
         </div>
       </div>
-      <div class="bedroom__content-item">
+      <div data-aos="fade-left" data-aos-duration="1600" class="bedroom__content-item">
         <svg class="icon bedroom__icon">
           <use xlink:href="#icon-door"></use>
         </svg>
@@ -246,7 +256,7 @@
           Spread out over two floors, the cabin offers 4 bedrooms. Ranging from 2 to 4 beds per room.
         </div>
       </div>
-      <div class="bedroom__content-item">
+      <div data-aos="fade-left" data-aos-duration="2400" class="bedroom__content-item">
         <svg class="icon bedroom__icon">
           <use xlink:href="#icon-bath"></use>
         </svg>
@@ -271,7 +281,7 @@
       quis consectetur.
     </div>
     <div class="perfect-escape__content">
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="1300" class="perfect-escape__content-item">
         <svg class="icon icon-plate">
           <use xlink:href="#icon-plate"></use>
         </svg>
@@ -282,7 +292,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="800" class="perfect-escape__content-item">
         <svg class="icon icon-trees">
           <use xlink:href="#icon-trees"></use>
         </svg>
@@ -291,7 +301,7 @@
           <div>Nulla rhoncus feugiat eros quis consectetur.</div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="1300" class="perfect-escape__content-item">
         <svg class="icon icon-food_processor">
           <use xlink:href="#icon-food_processor"></use>
         </svg>
@@ -302,7 +312,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="800" class="perfect-escape__content-item">
         <svg class="icon icon-mountain">
           <use xlink:href="#icon-mountain"></use>
         </svg>
@@ -313,7 +323,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="1300" class="perfect-escape__content-item">
         <svg class="icon icon-conditioner">
           <use xlink:href="#icon-conditioner"></use>
         </svg>
@@ -324,7 +334,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="800" class="perfect-escape__content-item">
         <svg class="icon icon-bag">
           <use xlink:href="#icon-bag"></use>
         </svg>
@@ -335,7 +345,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="1300" class="perfect-escape__content-item">
         <svg class="icon icon-wineglass">
           <use xlink:href="#icon-wineglass"></use>
         </svg>
@@ -346,7 +356,7 @@
           </div>
         </div>
       </div>
-      <div class="perfect-escape__content-item">
+      <div data-aos="fade-right" data-aos-duration="800" class="perfect-escape__content-item">
         <svg class="icon icon-pizza">
           <use xlink:href="#icon-pizza"></use>
         </svg>
@@ -443,20 +453,15 @@
           </div>
         </div>
       </div>
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div> -->
-      <!-- <div class="swiper-button-next"></div> -->
     </div>
-    <button class="slider__btn-next" type="button" id="js-slider-next">
-      <svg class="icon icon-arrow-right2">
-        <use xlink:href="#icon-arrow-right2"></use>
+    <div class="slider__btn">
+      <svg class="icon icon-circle-left" id="js-slider-prev">
+        <use xlink:href="#icon-circle-left"></use>
       </svg>
-    </button>
-    <button class="slider__btn-prev" type="button" id="js-slider-prev">
-      <svg class="icon icon-arrow-left2">
-        <use xlink:href="#icon-arrow-left2"></use>
+      <svg class="icon icon-circle-right" id="js-slider-next">
+        <use xlink:href="#icon-circle-right"></use>
       </svg>
-    </button>
+    </div>
   </section>
   <!-- Dresser -->
   <section class="kitchen-dresser">
@@ -474,13 +479,13 @@
     </div>
     <div class="come-together__right">
       <div>
-        <div class="come-together__right-item">
+        <div data-aos="fade-left" data-aos-duration="600" class="come-together__right-item">
           <svg class="icon icon-wi_fi">
             <use xlink:href="#icon-wi_fi"></use>
           </svg>
           <div class="come-together__right-description">Lorem ipsum dolor sit amet, consectetur.</div>
         </div>
-        <div class="come-together__right-item">
+        <div data-aos="fade-left" data-aos-duration="600" class="come-together__right-item">
           <svg class="icon icon-hanger">
             <use xlink:href="#icon-hanger"></use>
           </svg>
@@ -488,13 +493,13 @@
         </div>
       </div>
       <div>
-        <div class="come-together__right-item">
+        <div data-aos="fade-left" data-aos-duration="1400" class="come-together__right-item">
           <svg class="icon icon-bread">
             <use xlink:href="#icon-bread"></use>
           </svg>
           <div class="come-together__right-description">Nullam scelerisque aliquam odio et faucibus.</div>
         </div>
-        <div class="come-together__right-item">
+        <div data-aos="fade-left" data-aos-duration="1400" class="come-together__right-item">
           <svg class="icon icon-cutlery">
             <use xlink:href="#icon-cutlery"></use>
           </svg>
@@ -516,8 +521,9 @@
       scelerisque aliquam odio et faucibus.
     </div>
     <div class="booking__buttons">
-      <button class="button-white">Contact</button>
-      <button class="button-olive">Book now</button>
+      <a href="#contact" data-aos="fade-right" data-aos-duration="1300" class="button-white">Contact</a>
+      <button data-aos="fade-left" data-aos-duration="1300" class="button-olive js-toggle-registration-modal">Book
+        now</button>
     </div>
     <!-- Footer -->
   </section>
@@ -560,10 +566,6 @@
       </div>
       <div class="footer__distribution">
         <div class="footer__title">Newsletter</div>
-        <div class="footer__discription">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
-        </div>
         <div class="footer__input-button">
           <input class="footer__input" type="text" placeholder="Email" />
           <button class="footer__button" type="button"><span>Submit </span></button>
@@ -579,9 +581,50 @@
       </p>
     </div>
   </footer>
+  <!-- Modal -->
+  <div id="js-registration-modal" class="modal">
+    <form class="form" action="" method="post" id="js-registration-form">
+      <div class="form__title">
+        <span>
+          Book now
+        </span>
+        <button type="button" class=" form__btn__x js-toggle-registration-modal">
+          <svg class="icon icon-cross">
+            <use xlink:href="#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="form__wrapper">
+        <label for="" class="form__label">
+          <span class="form__subtitle">
+            Name
+          </span>
+          <input id="js-registration-form-first-name" name="firstName" type="text" class="form__input">
+        </label>
+        <label for="" class="form__label">
+          <span class="form__subtitle">
+            Email
+          </span>
+          <input id="js-registration-form-email" name="email" type="email" class="form__input">
+        </label>
+        <label for="" class="form__label">
+          <span class="form__subtitle">
+            Number of people
+          </span>
+          <input id="js-registration-form-persons" name="persons" type="text" class="form__input">
+        </label>
+        <div class="form__btn__wrapper">
+          <button type="submit" class="form__btn">
+            <span>Book now</span>
+          </button>
+        </div>
 
-  <script src="./index.js"></script>
+      </div>
+    </form>
+  </div>
 
+  <script defer src="./libs/aos/aos.js"></script>
+  <script defer type="module" src="./index.js"></script>
 </body>
 
 </html>
