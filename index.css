@@ -525,10 +525,21 @@ ul {
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
   min-height: 100vh;
-  background: url("../../assets/img/home.jpg") 100% no-repeat;
-  background-size: cover;
-  background-position: center center;
+}
+.banner__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .banner__wrapper {
   max-width: 1200px;
