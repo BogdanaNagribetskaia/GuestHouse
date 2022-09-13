@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__line {
     width: 42px;
     height: 8px;
@@ -17,5 +21,13 @@
     text-align: center;
     animation: fadeInLeft;
     animation-duration: 2s;
+
+    @include media("<=desktop") {
+      font-size: $fs-h3;
+    }
+
+    @include media("<=tablet") {
+      font-size: $fs-h4;
+    }
   }
 }

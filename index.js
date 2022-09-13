@@ -21,6 +21,14 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 1,
+    },
+  },
 });
 
 const swiper1 = document.querySelector('.swiper').swiper;
@@ -36,146 +44,146 @@ document.getElementById('js-slider-prev').addEventListener('click', () => {
 });
 
 // Map
-window.initMap = function () {
-  const location = { lat: 46.594433, lng: 7.909289 };
-  const myPin = './assets/img/pin.png';
+// window.initMap = function () {
+//   const location = { lat: 46.594433, lng: 7.909289 };
+//   const myPin = './assets/img/pin.png';
 
-  const map = new google.maps.Map(document.getElementById('js-map'), {
-    zoom: 15,
-    center: location,
-    styles: [
-      {
-        featureType: 'administrative',
-        elementType: 'all',
-        stylers: [
-          {
-            saturation: '-100',
-          },
-        ],
-      },
-      {
-        featureType: 'administrative.province',
-        elementType: 'all',
-        stylers: [
-          {
-            visibility: 'off',
-          },
-        ],
-      },
-      {
-        featureType: 'landscape',
-        elementType: 'all',
-        stylers: [
-          {
-            saturation: -100,
-          },
-          {
-            lightness: 65,
-          },
-          {
-            visibility: 'on',
-          },
-        ],
-      },
-      {
-        featureType: 'poi',
-        elementType: 'all',
-        stylers: [
-          {
-            saturation: -100,
-          },
-          {
-            lightness: '50',
-          },
-          {
-            visibility: 'simplified',
-          },
-        ],
-      },
-      {
-        featureType: 'road',
-        elementType: 'all',
-        stylers: [
-          {
-            saturation: '-100',
-          },
-        ],
-      },
-      {
-        featureType: 'road.highway',
-        elementType: 'all',
-        stylers: [
-          {
-            visibility: 'simplified',
-          },
-        ],
-      },
-      {
-        featureType: 'road.arterial',
-        elementType: 'all',
-        stylers: [
-          {
-            lightness: '30',
-          },
-        ],
-      },
-      {
-        featureType: 'road.local',
-        elementType: 'all',
-        stylers: [
-          {
-            lightness: '40',
-          },
-        ],
-      },
-      {
-        featureType: 'transit',
-        elementType: 'all',
-        stylers: [
-          {
-            saturation: -100,
-          },
-          {
-            visibility: 'simplified',
-          },
-        ],
-      },
-      {
-        featureType: 'water',
-        elementType: 'geometry',
-        stylers: [
-          {
-            hue: '#ffff00',
-          },
-          {
-            lightness: -25,
-          },
-          {
-            saturation: -97,
-          },
-        ],
-      },
-      {
-        featureType: 'water',
-        elementType: 'labels',
-        stylers: [
-          {
-            lightness: -25,
-          },
-          {
-            saturation: -100,
-          },
-        ],
-      },
-    ],
-  });
+//   const map = new google.maps.Map(document.getElementById('js-map'), {
+//     zoom: 15,
+//     center: location,
+//     styles: [
+//       {
+//         featureType: 'administrative',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             saturation: '-100',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'administrative.province',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             visibility: 'off',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'landscape',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             saturation: -100,
+//           },
+//           {
+//             lightness: 65,
+//           },
+//           {
+//             visibility: 'on',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'poi',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             saturation: -100,
+//           },
+//           {
+//             lightness: '50',
+//           },
+//           {
+//             visibility: 'simplified',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'road',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             saturation: '-100',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'road.highway',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             visibility: 'simplified',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'road.arterial',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             lightness: '30',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'road.local',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             lightness: '40',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'transit',
+//         elementType: 'all',
+//         stylers: [
+//           {
+//             saturation: -100,
+//           },
+//           {
+//             visibility: 'simplified',
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'water',
+//         elementType: 'geometry',
+//         stylers: [
+//           {
+//             hue: '#ffff00',
+//           },
+//           {
+//             lightness: -25,
+//           },
+//           {
+//             saturation: -97,
+//           },
+//         ],
+//       },
+//       {
+//         featureType: 'water',
+//         elementType: 'labels',
+//         stylers: [
+//           {
+//             lightness: -25,
+//           },
+//           {
+//             saturation: -100,
+//           },
+//         ],
+//       },
+//     ],
+//   });
 
-  const marker = new google.maps.Marker({
-    position: location,
-    map: map,
-    icon: myPin,
-  });
-};
+//   const marker = new google.maps.Marker({
+//     position: location,
+//     map: map,
+//     icon: myPin,
+//   });
+// };
 
 // Animation
 AOS.init({

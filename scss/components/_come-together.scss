@@ -1,5 +1,5 @@
 .come-together {
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 50px 0;
 
@@ -25,18 +25,32 @@
 
     &-item {
       display: flex;
-      align-items: center;
-      // flex-basis: 50%;
+      align-items: flex-start;
+      flex-basis: 50%;
       max-width: 270px;
+
+      &-sm {
+        @include media("<=1090px") {
+          margin-top: 42px;
+        }
+      }
+
       &:nth-child(2) {
         margin-top: 42px;
         margin-left: 15px;
       }
-      &:nth-child(3) {
-        margin-top: 42px;
-      }
+
       &:nth-child(1) {
         margin-left: 15px;
+      }
+
+      &:nth-child(4) {
+        margin-top: 42px;
+        margin-left: 15px;
+
+        @include media("<=1090px") {
+          margin-bottom: 42px;
+        }
       }
     }
   }
@@ -48,4 +62,8 @@
 .icon-cutlery {
   font-size: 2.5em;
   min-width: 36px;
+
+  @include media("<=tablet") {
+    font-size: 2em;
+  }
 }

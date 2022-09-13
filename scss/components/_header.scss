@@ -17,6 +17,16 @@
   &__logo {
     width: 128px;
     height: 45px;
+
+    @include media("<=tablet") {
+      width: 106px;
+      height: 40px;
+    }
+
+    @include media("<=phone") {
+      width: 84px;
+      height: 30px;
+    }
   }
 
   &__navigation {

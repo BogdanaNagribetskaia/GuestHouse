@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="./index.css">
   <title>Guest House</title>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFsbt7yIkH3lfMVTBZz-czHGz1Xi3xyTI&region=EN&language=en&callback=initMap&v=weekly"
-    async></script>
+  <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFsbt7yIkH3lfMVTBZz-czHGz1Xi3xyTI&region=EN&language=en&callback=initMap&v=weekly"></script> -->
 </head>
 
 <body>
@@ -171,7 +170,7 @@
       <img class="banner__background" src="./assets/img/home.jpg" alt="">
       <div class="banner__content container">
         <img class="banner__logo" src="./assets/img/logo.png" alt="Logo">
-        <div data-aos="fade-right" class="banner__title">
+        <div class="banner__title">
           Experience the perfect combination of modern housing & natural scenery.
         </div>
         <div class="banner__description">
@@ -179,7 +178,7 @@
         </div>
       </div>
       <div class="icon banner__mouse">
-        <img src="./assets/img/mouse.png" alt="Mouse">
+        <img class="banner__img" src="./assets/img/mouse.png" alt="Mouse">
       </div>
     </div>
   </section>
@@ -224,48 +223,48 @@
   </section>
   <!-- Bedroom -->
   <section id="licenses" class="bedroom">
-
-    <img src="./assets/img/orange-line.png" alt="Line">
-
-    <div class="bedroom__title">
-      Sleeping arrangements.
-    </div>
-    <div class="bedroom__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla
-      rhoncus feugiat eros quis consectetur.
-    </div>
-    <div class="bedroom__content   container">
-      <div data-aos="fade-left" data-aos-duration="800" class="bedroom__content-item">
-        <svg class="icon bedroom__icon">
-          <use xlink:href="#icon-bed"></use>
-        </svg>
-        <div class="bedroom__content-title">
-          Beds
-        </div>
-        <div>
-          The cabin is equipped with 12 beds, 4 of which are in bunk. The rent includes linens for all beds.
-        </div>
+    <div class="container">
+      <img src="./assets/img/orange-line.png" alt="Line">
+      <div class="bedroom__title">
+        Sleeping arrangements.
       </div>
-      <div data-aos="fade-left" data-aos-duration="1600" class="bedroom__content-item">
-        <svg class="icon bedroom__icon">
-          <use xlink:href="#icon-door"></use>
-        </svg>
-        <div class="bedroom__content-title">
-          Bedrooms
-        </div>
-        <div>
-          Spread out over two floors, the cabin offers 4 bedrooms. Ranging from 2 to 4 beds per room.
-        </div>
+      <div class="bedroom__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla
+        rhoncus feugiat eros quis consectetur.
       </div>
-      <div data-aos="fade-left" data-aos-duration="2400" class="bedroom__content-item">
-        <svg class="icon bedroom__icon">
-          <use xlink:href="#icon-bath"></use>
-        </svg>
-        <div class="bedroom__content-title">
-          Bathrooms
+      <div class="bedroom__content">
+        <div data-aos="fade-left" data-aos-duration="800" class="bedroom__content-item">
+          <svg class="icon bedroom__icon">
+            <use xlink:href="#icon-bed"></use>
+          </svg>
+          <div class="bedroom__content-title">
+            Beds
+          </div>
+          <div class="bedroom__description">
+            The cabin is equipped with 12 beds, 4 of which are in bunk. The rent includes linens for all beds.
+          </div>
         </div>
-        <div class="">
-          The cabin has three bathrooms, all equipped with showers and one with a bath tub.
+        <div data-aos="fade-left" data-aos-duration="1600" class="bedroom__content-item">
+          <svg class="icon bedroom__icon">
+            <use xlink:href="#icon-door"></use>
+          </svg>
+          <div class="bedroom__content-title">
+            Bedrooms
+          </div>
+          <div class="bedroom__description">
+            Spread out over two floors, the cabin offers 4 bedrooms. Ranging from 2 to 4 beds per room.
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2400" class="bedroom__content-item">
+          <svg class="icon bedroom__icon">
+            <use xlink:href="#icon-bath"></use>
+          </svg>
+          <div class="bedroom__content-title">
+            Bathrooms
+          </div>
+          <div class="bedroom__description">
+            The cabin has three bathrooms, all equipped with showers and one with a bath tub.
+          </div>
         </div>
       </div>
     </div>
@@ -285,7 +284,7 @@
           <use xlink:href="#icon-plate"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Modern Kitchen Appliances</div>
+          <div class="perfect-escape__content-title">Modern Kitchen Appliances</div>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
@@ -296,7 +295,7 @@
           <use xlink:href="#icon-trees"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Outdoor Paths</div>
+          <div class="perfect-escape__content-title">Outdoor Paths</div>
           <div>Nulla rhoncus feugiat eros quis consectetur.</div>
         </div>
       </div>
@@ -305,7 +304,7 @@
           <use xlink:href="#icon-food_processor"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Coffee Maker</div>
+          <div class="perfect-escape__content-title">Coffee Maker</div>
           <div>
             Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.
           </div>
@@ -316,7 +315,7 @@
           <use xlink:href="#icon-mountain"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Natural Scenery</div>
+          <div class="perfect-escape__content-title">Natural Scenery</div>
           <div>
             Cras commodo consequat orci, in convallis risus egestas non.
           </div>
@@ -327,7 +326,7 @@
           <use xlink:href="#icon-conditioner"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Air Conditioner</div>
+          <div class="perfect-escape__content-title">Air Conditioner</div>
           <div>
             Nullam scelerisque aliquam odio et faucibus.
           </div>
@@ -338,7 +337,7 @@
           <use xlink:href="#icon-bag"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Storage Solutions</div>
+          <div class="perfect-escape__content-title">Storage Solutions</div>
           <div>
             Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.
           </div>
@@ -349,7 +348,7 @@
           <use xlink:href="#icon-wineglass"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Cutlery Selection</div>
+          <div class="perfect-escape__content-title">Cutlery Selection</div>
           <div>
             Duis tristique sed lorem a vestibulum.
           </div>
@@ -360,7 +359,7 @@
           <use xlink:href="#icon-pizza"></use>
         </svg>
         <div class="perfect-escape__content-description">
-          <div>Take-away Options</div>
+          <div class="perfect-escape__content-title">Take-away Options</div>
           <div>
             Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.
           </div>
@@ -370,97 +369,104 @@
   </section>
   <!-- Slider -->
   <section class="slider">
-    <div>
-      <img src="./assets/img/orange-line.png" alt="">
-    </div>
-    <div class="slider__title">Past guests.</div>
-    <div class="slider__description">Don't take our word for it! Have a look at what our previous guests say about their
-      stay at the Guest House.</div>
-    <!-- Slider main container -->
-    <div class="swiper  container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="slider__card card">
-            <div class="card__stars">
-              <div class="stars-5">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
+    <div class="container">
+      <div>
+        <img src="./assets/img/orange-line.png" alt="">
+      </div>
+      <div class="slider__title">Past guests.</div>
+      <div class="slider__description">Don't take our word for it! Have a look at what our previous guests say about
+        their
+        stay at the Guest House.</div>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide swiper-slide-custom">
+            <div class="slider__card card">
+              <div class="card__stars">
+                <div class="stars-5">
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                </div>
               </div>
-            </div>
-            <div class="card__title">We had an amazing stay at the Guest House!</div>
-            <div class="card__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis
-              viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-              vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-              imperdiet. Nunc ut sem vitae risus tristique posuere.
-            </div>
-            <div class="card__footer">
-              <img class="card__line" src="./assets/img/Rectangle.png" alt="">
-              <div class="card__footer-info">Nate Davidsson</div>
+              <div class="card__title">We had an amazing stay at the Guest House!</div>
+              <div class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                varius enim in eros elementum tristique. Duis cursus, mi quis
+                viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+                imperdiet. Nunc ut sem vitae risus tristique posuere.
+              </div>
+              <div class="card__footer">
+                <img class="card__line" src="./assets/img/Rectangle.png" alt="">
+                <div class="card__footer-info">Nate Davidsson</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="slider__card card">
-            <div class="card__stars">
-              <div class="stars-4">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
+          <div class="swiper-slide swiper-slide-custom">
+            <div class="slider__card card">
+              <div class="card__stars">
+                <div class="stars-4">
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/EmptyStar.png" alt=""></div>
+                </div>
               </div>
-            </div>
-            <div class="card__title">Beautiful little hideaway.</div>
-            <div class="card__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
-            </div>
-            <div class="card__footer">
-              <img class="card__line" src="./assets/img/Rectangle.png" alt="">
-              <div class="card__footer-info">Laura Paulie</div>
+              <div class="card__title">Beautiful little hideaway.</div>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+                erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+              </p>
+              <div class="card__footer">
+                <img class="card__line" src="./assets/img/Rectangle.png" alt="">
+                <div class="card__footer-info">Laura Paulie</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="slider__card card">
-            <div class="card__stars">
-              <div class="stars-5">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
+          <div class="swiper-slide">
+            <div class="slider__card card">
+              <div class="card__stars">
+                <div class="stars-5">
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                  <div class="star"><img src="./assets/img/Star.png" alt=""></div>
+                </div>
               </div>
-            </div>
-            <div class="card__title">Best vacation ever!</div>
-            <div class="card__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique.
-            </div>
-            <div class="card__footer">
-              <img class="card__line" src="./assets/img/Rectangle.png" alt="">
-              <div class="card__footer-info">Greg Todd</div>
+              <div class="card__title">Best vacation ever!</div>
+              <div class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                tristique.
+              </div>
+              <div class="card__footer">
+                <img class="card__line" src="./assets/img/Rectangle.png" alt="">
+                <div class="card__footer-info">Greg Todd</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="slider__btn-wrapper">
+        <div class="slider__btn">
+          <svg class="icon icon-circle-left" id="js-slider-prev">
+            <use xlink:href="#icon-circle-left"></use>
+          </svg>
+          <svg class="icon icon-circle-right" id="js-slider-next">
+            <use xlink:href="#icon-circle-right"></use>
+          </svg>
+        </div>
+      </div>
+
     </div>
-    <div class="slider__btn">
-      <svg class="icon icon-circle-left" id="js-slider-prev">
-        <use xlink:href="#icon-circle-left"></use>
-      </svg>
-      <svg class="icon icon-circle-right" id="js-slider-next">
-        <use xlink:href="#icon-circle-right"></use>
-      </svg>
-    </div>
+
   </section>
   <!-- Dresser -->
   <section class="kitchen-dresser">
@@ -492,7 +498,8 @@
         </div>
       </div>
       <div>
-        <div data-aos="fade-left" data-aos-duration="1400" class="come-together__right-item">
+        <div data-aos="fade-left" data-aos-duration="1400"
+          class="come-together__right-item come-together__right-item-sm">
           <svg class="icon icon-bread">
             <use xlink:href="#icon-bread"></use>
           </svg>
@@ -527,7 +534,14 @@
     <!-- Footer -->
   </section>
   <!-- Map -->
-  <div id="js-map" style="height: 500px;"></div>
+  <div style="width: 100%">
+    <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Bahnhofpl.,%203822%20Lauterbrunnen,%20Switzerland+(Hotel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+      <a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map
+      </a>
+    </iframe>
+  </div>
+  <!-- <div id="js-map" style="height: 500px;"></div> -->
   <!-- Footer -->
   <footer class="footer">
     <div class="footer__wrapper  container">
@@ -571,13 +585,20 @@
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
+    <div class="footer__bottom container">
       <img class="footer__logo" src="./assets/img/logo.png" alt="">
-      <p class="footer__bottom-title">© Guest House, LLC. All rights reserved. Powered by Nahrybetska Bohdana</p>
-      <p id="contact">
-        +47 (0) 702 88 12 34 — lauterbrunnen@gmail.com — Klubbvika 12, 8310 Lauterbrunnen,
-        Switzerland
-      </p>
+      <div class="footer__bottom-title">
+        <div>
+          © Guest House, LLC. All rights reserved.
+        </div>
+        <div>Powered by Nahrybetska Bohdana</div>
+      </div>
+      <div class="footer__bottom-contacts">
+        <a href="mailto:bohdanaaaaa@gmail.com">bohdanaaaaa@gmail.com</a><a href="tel:+38 (0) 634 16 14 30">+38 (0) 634
+          16 14 30</a>
+        <address>Klubbvika 12, 8310 Lauterbrunnen,
+          Switzerland</address>
+      </div>
     </div>
   </footer>
   <!-- Modal -->
@@ -625,5 +646,6 @@
   <script defer src="./libs/aos/aos.js"></script>
   <script defer type="module" src="./index.js"></script>
 </body>
+
 
 </html>

@@ -1,9 +1,24 @@
 .perfect-escape {
   padding: 50px 0;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__title {
     margin-top: 30px;
+    margin-bottom: 14px;
     font-size: $fs-h4;
+
+    @include media("<=tablet") {
+      font-size: $fs-h4 - 8px;
+    }
+  }
+
+  &__description {
+    @include media("<=tablet") {
+      font-size: $fs-base-s - 2px;
+    }
   }
 
   &__content {
@@ -12,13 +27,33 @@
 
     &-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-basis: 50%;
       margin-top: 42px;
+
+      @include media("<=tablet") {
+        margin-top: 14px;
+      }
+    }
+
+    &-title {
+      font-size: $fs-base-s;
+
+      @include media("<=tablet") {
+        font-size: $fs-base-s - 2px;
+      }
     }
 
     &-description {
       margin-left: 14px;
+
+      @include media("<=tablet") {
+        font-size: $fs-base-s - 4px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
     }
   }
 }
@@ -33,4 +68,8 @@
 .icon-pizza {
   font-size: 2.25em;
   min-width: 36px;
+
+  @include media("<=tablet") {
+    font-size: 2em;
+  }
 }

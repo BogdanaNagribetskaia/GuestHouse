@@ -3,16 +3,35 @@
   color: $c-white;
   padding: 50px 0;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__wrapper {
     display: flex;
+
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
   }
 
   &__navigation {
     margin-right: 207px;
+    @include media("<=desktop") {
+      margin-right: 20px;
+    }
 
     &-social {
       display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       flex-basis: 50%;
+      margin-right: 20px;
+      @include media("<=desktop") {
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+      }
     }
 
     &-link {
@@ -22,6 +41,10 @@
 
   &__title {
     text-transform: uppercase;
+
+    @include media("<=tablet") {
+      margin-top: 25px;
+    }
   }
 
   &__social {
@@ -43,6 +66,10 @@
     width: auto;
     height: 52px;
     z-index: 5;
+
+    @include media("<=tablet") {
+      margin-top: 6px;
+    }
   }
 
   &__input {
@@ -92,22 +119,44 @@
   &__bottom {
     display: flex;
     margin-top: 48px;
-    display: flex;
     align-items: center;
     flex-direction: column;
+
+    @include media("<=tablet") {
+      margin-top: 24px;
+    }
+
     &-title {
       margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
   &__logo {
     width: 256px;
     height: 90px;
+
+    @include media("<=tablet") {
+      width: 168px;
+      height: 60px;
+    }
   }
 }
 
 .icon-airbnb,
 .icon-facebook,
 .icon-instagram {
-  font-size: 2em;
+  font-size: 3em;
+
+  @include media("<=tablet") {
+    font-size: 2em;
+  }
 }

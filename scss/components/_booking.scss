@@ -6,15 +6,27 @@
   align-items: center;
   text-align: center;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__title {
     margin-top: 30px;
     max-width: 533px;
     font-size: $fs-h4;
+
+    @include media("<=tablet") {
+      font-size: $fs-h4 - 8px;
+    }
   }
 
   &__description {
     margin-top: 14px;
     max-width: 533px;
+
+    @include media("<=tablet") {
+      font-size: $fs-base-s - 2px;
+    }
   }
 
   &__buttons {

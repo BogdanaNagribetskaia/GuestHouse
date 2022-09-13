@@ -8,14 +8,25 @@
   animation: fadeInDown;
   animation-duration: 2s;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__title {
     margin-top: 30px;
     font-size: $fs-h4;
+
+    @include media("<=tablet") {
+      font-size: $fs-h4 - 8px;
+    }
   }
 
   &__description {
-    max-width: 554px;
     margin-top: 14px;
+
+    @include media("<=tablet") {
+      font-size: $fs-base-s - 2px;
+    }
   }
 
   &__content {
@@ -28,16 +39,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       max-width: 340px;
     }
 
     &-title {
       margin-top: 12px;
+      margin-bottom: 12px;
       font-size: $fs-base-m;
     }
   }
 }
 .bedroom__icon {
   font-size: 4em;
+
+  @include media("<=tablet") {
+    font-size: 2em;
+  }
 }

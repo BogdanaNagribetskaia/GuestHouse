@@ -5,6 +5,10 @@
   align-items: center;
   background-color: $c-floral-white;
 
+  @include media("<=tablet") {
+    padding: 25px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -22,15 +26,25 @@
     margin-top: 33px;
     display: flex;
     flex-direction: row;
+
+    @include media("<=tablet") {
+      font-size: 12px;
+    }
   }
 
   &__content-left {
-    max-width: 360px;
-    margin-right: 40px;
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 50%;
+    margin-right: 10px;
   }
 
   &__content-right {
-    max-width: 360px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 48%;
   }
 
   &__button {

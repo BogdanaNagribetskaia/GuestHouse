@@ -64,6 +64,11 @@
     height: 90px;
     animation: fadeInDown;
     animation-duration: 2s;
+
+    @include media("<=tablet") {
+      width: 168px;
+      height: 60px;
+    }
   }
 
   &__title {
@@ -72,6 +77,10 @@
     line-height: 52.8px;
     animation: fadeInLeft;
     animation-duration: 2s;
+
+    @include media("<=desktop") {
+      font-size: $fs-h4;
+    }
   }
 
   &__description {
@@ -81,19 +90,35 @@
     letter-spacing: $ls-base;
     animation: fadeInRight;
     animation-duration: 2s;
+
+    @include media("<=desktop") {
+      // font-size: $fs-h4;
+    }
   }
 
   &__mouse {
     height: 60px;
     width: 60px;
-    color: none;
     position: absolute;
     bottom: 50px;
     left: 50%;
     transition: $t-normal;
+
+    @include media("<=tablet") {
+      height: 40px;
+      width: 40px;
+    }
+
     &:hover {
       transform: translateY(15px);
       opacity: 0.6;
+    }
+  }
+
+  &__img {
+    @include media("<=tablet") {
+      height: 40px;
+      width: 40px;
     }
   }
 }
